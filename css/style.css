@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game-container {
+    background: url("../img/snake.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#scoreBox,
+#hiscoreBox {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'New Tegomin', sans-serif;
+    margin-bottom: 10px;
+}
+
+#board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vw;
+    max-width: 400px; 
+    height: calc(90vw - 80px); 
+    max-height: calc(400px - 80px); 
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head {
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34);
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake {
+    background-color: orange;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
+
+#outMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+    color: red;
+}
+
+#controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#controls > div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
